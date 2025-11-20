@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="bg-[#0A1C5A] text-white pt-12">
@@ -22,9 +23,9 @@ export default function Footer() {
             <div>
               <h3 className="text-lg font-semibold mb-3">Sosial Media</h3>
               <div className="flex space-x-4 mb-6">
-                <div className="p-3 bg-white/10 rounded-full cursor-pointer">📘</div>
-                <div className="p-3 bg-white/10 rounded-full cursor-pointer">📷</div>
-                <div className="p-3 bg-white/10 rounded-full cursor-pointer">🟦</div>
+                <div className="p-3 bg-white/10 rounded-full cursor-pointer"><Image src="/fesbuk.png" alt="Facebook" width={25} height={25} /></div>
+                <div className="p-3 bg-white/10 rounded-full cursor-pointer"><Image src="/tt.png" alt="TikTok" width={25} height={25} /></div>
+                <div className="p-3 bg-white/10 rounded-full cursor-pointer"><Image src="/insta.png" alt="Instagram" width={25} height={25} /></div>
               </div>
             </div>
 
@@ -32,8 +33,8 @@ export default function Footer() {
             <div>
               <h3 className="text-lg font-semibold mb-3">Market Place</h3>
               <div className="flex space-x-4 mb-6">
-                <div className="p-3 bg-white/10 rounded-full cursor-pointer">🛒</div>
-                <div className="p-3 bg-white/10 rounded-full cursor-pointer">🟢</div>
+                <div className="p-3 bg-white/10 rounded-full cursor-pointer"><Image src="/sopi.png" alt="Shopee" width={25} height={25}/></div>
+                <div className="p-3 bg-white/10 rounded-full cursor-pointer"><Image src="/wangsaf.png" alt="Whatsapp" width={25} height={25}/></div>
               </div>
             </div>
 
@@ -41,7 +42,7 @@ export default function Footer() {
 
           {/* Alamat */}
           <div className="flex items-start space-x-3">
-            <span className="text-xl">📍</span>
+            <span className="text-xl"><Image src="/location-pin.svg" alt="Lokasi" width={18} height={18}/></span>
             <p className="text-sm w-[85%]">
               Jl. Diponegoro No. 5 Temanggung ( Terminal lama Temanggung)
             </p>
@@ -68,12 +69,12 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Hubungi Kami</h3>
 
             <div className="flex items-center space-x-3 mb-4">
-              <span>📞</span>
+              <span><Image src="phone-icon.svg" alt="Nomer Telephone" width={25} height={25}/></span>
               <p>0896 - 4338 - 0202</p>
             </div>
 
             <div className="flex items-center space-x-3">
-              <span>✉️</span>
+              <span><Image src="email-icon.svg" alt="Email" width={25} height={25}/></span>
               <p>murbaututomo@gmail.com</p>
             </div>
           </div>

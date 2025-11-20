@@ -2,32 +2,32 @@ import Image from "next/image";
 export default function Keunggulan() {
     const item = [
         {
-        icon: "",
+        icon: "/guarantee-icon.svg",
         title: "Produk Asli Bergaransi",
         desc: "Kamai hanya menjual produk original dari brand terpercaya.",
     },
         {
-        icon: "",
+        icon: "/good-service-icon.svg",
         title: "Layanan cepat dan ramah",
         desc: "Tim kami siap membantu kebutuhan taktik anda.",
     },
         {
-        icon: "",
+        icon: "price-icon.svg",
         title: "Harga kompetitif",
         desc: "Solusi hemat untuk kebutuhan proyek dan industri..",
     },
         {
-        icon: "",
+        icon: "product-icon.svg",
         title: "Produk lengkap",
         desc: "Dari mur, baut, hingga perlengkapan teknik tersedia di satu tempat.",
     },
         {
-        icon: "",
+        icon: "delivery-icon.svg",
         title: "Pengiriman Aman & Tepat Waktu",
         desc: "Pesanan Anda dikirim dengan cepat dan terjamin sampai tujuan.",
     },
         {
-        icon: "",
+        icon: "consultation-icon.svg",
         title: "Konsultasi Produk",
         desc: "Dapatkan panduan profesional sebelum membeli peralatan teknik.",
     },

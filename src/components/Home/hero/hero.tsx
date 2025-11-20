@@ -27,7 +27,7 @@ export default function Hero() {
                 {/* {Right Side} */}
                 <div>
                     <img
-                    src="/images/toko.jpg"
+                    src="/home-hero.png"
                     alt="Foto Toko"
                     className="rounded-xl shadow-lg"
                     />
