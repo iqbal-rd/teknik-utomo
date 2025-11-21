@@ -15,7 +15,7 @@ export default function Keunggulan() {
             {/* Card */}
             <div className="bg-[#FFFFFF1A] grid grid-cols-1 md:grid-cols-[auto_1fr] gap-2.5 md:gap-5 lg:gap-2.5 px-5 pt-5 pb-[50px] rounded-lg transition-all duration-300 hover:-translate-y-2 mb-5 last:mb-0">
               <div className="relative w-[40px] h-[40px] md:w-[50px] md:h-[50px] lg:w-[60px] lg:h-[60px]">
-                {/* <img alt="Produk Asli Bergaransi" src="/icon/guarantee-icon.svg" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" class="imageye-selected"></img> */}
+                <img alt="Produk Asli Bergaransi" src="/icon/guarantee-icon.svg" loading="lazy" style={{position:"absolute", height:"100%", width:"100%", left:"0", top:"0", right:"0", bottom:"0", color:"transparent"}} decoding="async" data-nimg="fill"></img>
               </div>
               <div><h3 className="text-white text-[16px] md:text-[18px] lg:text-[20px] font-semibold mb-2.5">Produk Asli Bergaransi</h3>
               <p className="text-[#F2F2F2] text-[14px] md:text-[16px] lg:text-[18px]">
@@ -25,7 +25,7 @@ export default function Keunggulan() {
 
             <div className="bg-[#FFFFFF1A] grid grid-cols-1 md:grid-cols-[auto_1fr] gap-2.5 md:gap-5 lg:gap-2.5 px-5 pt-5 pb-[50px] rounded-lg transition-all duration-300 hover:-translate-y-2 mb-5 last:mb-0">
               <div className="relative w-[40px] h-[40px] md:w-[50px] md:h-[50px] lg:w-[60px] lg:h-[60px]">
-                {/* <img alt="Produk Asli Bergaransi" src="/icon/guarantee-icon.svg" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" class="imageye-selected"></img> */}
+                <img alt="Layanan Cepat & Ramah" src="/icon/good-service-icon.svg" loading="lazy" style={{position:"absolute", height:"100%", width:"100%", left:"0", top:"0", right:"0", bottom:"0", color:"transparent"}} decoding="async" data-nimg="fill"></img>
               </div>
               <div><h3 className="text-white text-[16px] md:text-[18px] lg:text-[20px] font-semibold mb-2.5">Layanan Cepat & Ramah</h3>
               <p className="text-[#F2F2F2] text-[14px] md:text-[16px] lg:text-[18px]">
@@ -35,7 +35,7 @@ export default function Keunggulan() {
 
             <div className="bg-[#FFFFFF1A] grid grid-cols-1 md:grid-cols-[auto_1fr] gap-2.5 md:gap-5 lg:gap-2.5 px-5 pt-5 pb-[50px] rounded-lg transition-all duration-300 hover:-translate-y-2 mb-5 last:mb-0">
               <div className="relative w-[40px] h-[40px] md:w-[50px] md:h-[50px] lg:w-[60px] lg:h-[60px]">
-                {/* <img alt="Produk Asli Bergaransi" src="/icon/guarantee-icon.svg" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" class="imageye-selected"></img> */}
+                <img alt="Harga Kompetitif" src="/icon/price-icon.svg" loading="lazy" style={{position:"absolute", height:"100%", width:"100%", left:"0", top:"0", right:"0", bottom:"0", color:"transparent"}} decoding="async" data-nimg="fill"></img>
               </div>
               <div><h3 className="text-white text-[16px] md:text-[18px] lg:text-[20px] font-semibold mb-2.5">Harga Kompetitif</h3>
               <p className="text-[#F2F2F2] text-[14px] md:text-[16px] lg:text-[18px]">
@@ -45,7 +45,7 @@ export default function Keunggulan() {
 
             <div className="bg-[#FFFFFF1A] grid grid-cols-1 md:grid-cols-[auto_1fr] gap-2.5 md:gap-5 lg:gap-2.5 px-5 pt-5 pb-[50px] rounded-lg transition-all duration-300 hover:-translate-y-2 mb-5 last:mb-0">
               <div className="relative w-[40px] h-[40px] md:w-[50px] md:h-[50px] lg:w-[60px] lg:h-[60px]">
-                {/* <img alt="Produk Asli Bergaransi" src="/icon/guarantee-icon.svg" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" class="imageye-selected"></img> */}
+                <img alt="Produk Lengkap" src="/icon/product-icon.svg" loading="lazy" decoding="async" style={{position:"absolute", height:"100%", width:"100%", left:"0", top:"0", right:"0", bottom:"0", color:"transparent"}} data-nimg="fill"></img>
               </div>
               <div><h3 className="text-white text-[16px] md:text-[18px] lg:text-[20px] font-semibold mb-2.5">Produk Lengkap</h3>
               <p className="text-[#F2F2F2] text-[14px] md:text-[16px] lg:text-[18px]">
@@ -55,7 +55,7 @@ export default function Keunggulan() {
 
             <div className="bg-[#FFFFFF1A] grid grid-cols-1 md:grid-cols-[auto_1fr] gap-2.5 md:gap-5 lg:gap-2.5 px-5 pt-5 pb-[50px] rounded-lg transition-all duration-300 hover:-translate-y-2 mb-5 last:mb-0">
               <div className="relative w-[40px] h-[40px] md:w-[50px] md:h-[50px] lg:w-[60px] lg:h-[60px]">
-                {/* <img alt="Produk Asli Bergaransi" src="/icon/guarantee-icon.svg" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" class="imageye-selected"></img> */}
+                <img alt="Pengiriman Aman & Tepat Waktu" src="/icon/delivery-icon.svg" loading="lazy" style={{position:"absolute", height:"100%", width:"100%", left:"0", top:"0", right:"0", bottom:"0", color:"transparent"}} decoding="async" data-nimg="fill"></img>
               </div>
               <div><h3 className="text-white text-[16px] md:text-[18px] lg:text-[20px] font-semibold mb-2.5">Pengiriman Aman & Tepat Waktu</h3>
               <p className="text-[#F2F2F2] text-[14px] md:text-[16px] lg:text-[18px]">
@@ -65,7 +65,7 @@ export default function Keunggulan() {
 
             <div className="bg-[#FFFFFF1A] grid grid-cols-1 md:grid-cols-[auto_1fr] gap-2.5 md:gap-5 lg:gap-2.5 px-5 pt-5 pb-[50px] rounded-lg transition-all duration-300 hover:-translate-y-2 mb-5 last:mb-0">
               <div className="relative w-[40px] h-[40px] md:w-[50px] md:h-[50px] lg:w-[60px] lg:h-[60px]">
-                {/* <img alt="Produk Asli Bergaransi" src="/icon/guarantee-icon.svg" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" class="imageye-selected"></img> */}
+                <img alt="Konsultasi Produk" src="/icon/consultation-icon.svg" loading="lazy" style={{position:"absolute", height:"100%", width:"100%", left:"0", top:"0", right:"0", bottom:"0", color:"transparent"}} decoding="async" data-nimg="fill"></img>
               </div>
               <div><h3 className="text-white text-[16px] md:text-[18px] lg:text-[20px] font-semibold mb-2.5">Konsultasi Produk</h3>
               <p className="text-[#F2F2F2] text-[14px] md:text-[16px] lg:text-[18px]">

@@ -1,4 +1,23 @@
 /* src/app/tentang-kami/page.tsx */
+"use client";
+
+import Image from "next/image";
+import Marquee from "react-fast-marquee";
+
+const brandLogos = [
+  { src: "/brand/wipro.png", alt: "Wipro Logo" },
+  { src: "/brand/tiapmata.png", alt: "Tjap Mata Logo" },
+  { src: "/brand/modern.png", alt: "Modern Power Tools Logo" },
+  { src: "/brand/bison.png", alt: "bison" },
+  { src: "/brand/makita.png", alt: "makita Logo" },
+  { src: "/brand/mollar.png", alt: "mollar Logo" },
+  { src: "/brand/raigor.png", alt: "raigor Logo" },
+  { src: "/brand/tekiro.png", alt: "tekiro Logo" },
+  { src: "/brand/taho.png", alt: "toho Logo" },
+  { src: "/brand/haston.png", alt: "haston Logo" },
+];
+
+const logo = [...brandLogos, ...brandLogos];
 export default function Brand() {
   return (
     <div className="w-full">
@@ -17,26 +36,25 @@ export default function Brand() {
           </p>
 
           {/* Logo brand dengan carousel */}
-          <div className="overflow-hidden py-8">
-            <div className="flex items-center animate-scroll gap-16">
-              <img src="/brand/haston.png" alt="Haston" className="h-12" />
-              <img src="/brand/tekiro.png" alt="Tekiro" className="h-12" />
-              <img src="/brand/mollar.png" alt="Mollar" className="h-12" />
-              <img src="/brand/wipro.png" alt="Wipro" className="h-12" />
-              <img src="/brand/toho.png" alt="Toho" className="h-12" />
-              <img src="/brand/raigor.png" alt="Raigor" className="h-12" />
-              <img src="/brand/xenon.png" alt="Xenon" className="h-12" />
-
-
-              {/* Duplikat agar loop terlihat mulus */}
-              <img src="/brand/haston.png" alt="Haston" className="h-12" />
-              <img src="/brand/tekiro.png" alt="Tekiro" className="h-12" />
-              <img src="/brand/mollar.png" alt="Mollar" className="h-12" />
-              <img src="/brand/wipro.png" alt="Wipro" className="h-12" />
-              <img src="/brand/toho.png" alt="Toho" className="h-12" />
-              <img src="/brand/raigor.png" alt="Raigor" className="h-12" />
-              <img src="/brand/xenon.png" alt="Xenon" className="h-12" />
-            </div>
+          <div className="mt-8">
+            <Marquee speed={40} pauseOnHover={true}>
+              {logo.map((brand, index) => (
+                <div key={index} className="mx-2">
+                  <div className=" relative bg-white rounded-2xl mb-2 shadow-md lg:w-[285px] lg:h-[98px] md:w-[285px] md:h-[98px] w-[170px] h-[66px] flex items-center justify-center p-6 hover:shadow-xl transition-shadow">
+                     <Image
+                      src={brand.src}
+                      alt={brand.alt}
+                      fill
+                      unoptimized
+                      loading="lazy"
+                      priority={false}
+                      
+                      className="object-contain p-3 lg:px-10 lg:py-4 md:px-8 md:py-4 w-auto h-auto "
+                    />
+                  </div>
+                </div>
+              ))}
+            </Marquee>
           </div>
         </div>
       </section>
