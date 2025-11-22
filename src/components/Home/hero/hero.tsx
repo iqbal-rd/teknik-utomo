@@ -1,11 +1,20 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function Hero() {
     return(
         <section className="bg-[#0A1F53] text-white py-20">
-            <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 item-center">
+            <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
 
                 {/* {left side} */}
-                <div>
-                    <p className="text-grey-300 mb-3 text-lg">Toko Teknik</p>
+                <motion.div
+                initial={{opacity: 0, y:40 }}
+                animate={{opacity: 1, y:0 }}
+                transition={{ duration: 0.8, ease: "easeOut"}}
+            >
+                
+                    <p className="text-gray-300 mb-3 text-lg">Toko Teknik</p>
 
                     <h1 className="text-4xl md:text-5xl font-bold leading-tight">
                         Solusi Baut & Alat Teknik Lengkap <br />
@@ -22,16 +31,21 @@ export default function Hero() {
                     <button className="mt-8 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg transition">
                         Lihat Selengkapnya
                     </button>
-                </div>
+                </motion.div>
 
                 {/* {Right Side} */}
-                <div>
+
+                <motion.div     
+                initial={{ opacity: 0, x: 60}}
+                animate={{ opacity: 1, x: 0}}
+                transition={{duration: 0.8, ease: "easeOut"}}
+                >
                     <img
                     src="/home-hero.png"
                     alt="Foto Toko"
                     className="rounded-xl shadow-lg"
                     />
-                </div>
+                </motion.div>
                 
             </div>
         </section>

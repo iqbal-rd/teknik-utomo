@@ -23,6 +23,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "UTOMO - Toko Mur Baut Dan Teknik",
   description: "Web Resmi Utomo",
+  // icons: {
+  //       icon: "@/public/home-hero.png"
+  // },
 };
 
 export default function RootLayout({
