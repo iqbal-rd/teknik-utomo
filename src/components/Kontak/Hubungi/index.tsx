@@ -5,27 +5,27 @@ import { Mail, MapPin, Phone } from "lucide-react";
 export default function ContactPage() {
   return (
     <section className="overflow-hidden max-w-[430px] md:max-w-[744px] lg:max-w-[1440px] mx-auto px-[28px] md:px-[44px] lg:px-[88px] pt-[70px] mb-[30px] md:pt-[90px] md:mb-[40px] lg:pt-[140px] lg:mb-[80px]">
-      <p className="text-[#2F2D93] text-[14px] md:text-[16px] lg:text-[18px] mb-1 text-center">
+      <p className="text-[#2F2D93] text-[14px] md:text-[16px] lg:text-[18px] mb-1 text-center font-inter">
         Contact
       </p>
-      <h2 className="text-center text-3xl font-semibold text-blue-900 mb-8">
+      <h2 className="text-center text-3xl font-semibold text-blue-900 font-poppins mb-8">
         Hubungi<span className="text-orange-500"> Kami</span>
       </h2>
       {/* Info Kontak */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-2.5 md:gap-5 mb-[30px] md:mb-[40px] lg:mb-[80px]">
         <div className="bg-[#0F2464] px-2.5 py-3 md:pt-4 md:pb-9 lg:py-5 rounded-lg flex md:flex-col lg:flex-row justify-center items-center gap-2.5">
           <Phone className="text-orange-400" size={50} />
-          <h3 className="text-white text-[14px] md:text-[16px] lg:text-[20px] font-semibold truncate">0896 - 4338 - 0202</h3>
+          <h3 className="text-white text-[14px] md:text-[16px] lg:text-[20px] font-inter font-semibold truncate">0896 - 4338 - 0202</h3>
         </div>
 
         <div className="bg-[#0F2464] px-2.5 py-3 md:pt-4 md:pb-9 lg:py-5 rounded-lg flex md:flex-col lg:flex-row justify-center items-center gap-2.5">
           <Mail className="text-orange-400" size={50} />
-          <h3 className="text-white text-[14px] md:text-[16px] lg:text-[20px] font-semibold truncate">murbaututomo@gmail.com</h3>
+          <h3 className="text-white text-[14px] md:text-[16px] lg:text-[20px] font-inter font-semibold truncate">murbaututomo@gmail.com</h3>
         </div>
 
         <div className="bg-[#0F2464] px-2.5 py-3 md:pt-4 md:pb-9 lg:py-5 rounded-lg flex md:flex-col lg:flex-row justify-center items-center gap-2.5">
           <MapPin className="text-orange-400" size={50} />
-          <h3 className="text-white text-[14px] md:text-[16px] lg:text-[20px] font-semibold truncate">Temanggung</h3>
+          <h3 className="text-white text-[14px] md:text-[16px] lg:text-[20px] font-inter font-semibold truncate">Temanggung</h3>
         </div>
       </div>
 
@@ -34,10 +34,10 @@ export default function ContactPage() {
         {/* Form */}
         <form className="bg-white p-6 rounded-xl shadow-md space-y-4 border border-[#EEEEEE] style-opacity-1 transform-none"
         >
-          <h3 className="text-black text-2xl font-semibold mb-4">Kirim Pesan Kepada Kami</h3>
+          <h3 className="text-black text-2xl font-semibold font-poppins mb-4">Kirim Pesan Kepada Kami</h3>
 
           <div>
-            <label className="text-black block text-sm font-medium mb-1">
+            <label className="text-black block text-sm font-medium font-inter mb-1">
               Nama<span className="text-red-500">*</span>
             </label>
             <input
@@ -49,7 +49,7 @@ export default function ContactPage() {
           </div>
 
           <div>
-            <label className="text-black block text-sm font-medium mb-1">
+            <label className="text-black block text-sm font-medium font-inter mb-1">
               Phone<span className="text-red-500">*</span>
             </label>
             <input
@@ -61,7 +61,7 @@ export default function ContactPage() {
           </div>
 
           <div>
-            <label className="text-black block text-sm font-medium mb-1">Subjek</label>
+            <label className="text-black block text-sm font-medium font-inter mb-1">Subjek</label>
             <input
               type="text"
               placeholder="Subjek"
@@ -70,7 +70,7 @@ export default function ContactPage() {
           </div>
 
           <div>
-            <label className="text-black block text-sm font-medium mb-1">
+            <label className="text-black block text-sm font-medium font-inter mb-1">
               Pesan<span className="text-red-500">*</span>
             </label>
             <textarea
@@ -83,7 +83,8 @@ export default function ContactPage() {
           <div className="flex justify-end lg:mt-4 items-end">
           <button
             type="submit"
-            className="bg-orange-400 hover:bg-orange-500 text-white px-5 py-2 rounded-lg font-semibold transition"
+            className="px-8 py-2 rounded-lg font-medium text-[14px] md:text-[16px] transition duration-200 bg-[#F05A28] text-[#F2F2F2] hover:bg-[#F37744] cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+            disabled
           >
             Kirim Pesan
           </button>
@@ -93,7 +94,7 @@ export default function ContactPage() {
         {/* Lokasi */}
         <div>
           <h3 className="text-black text-2xl font-semibold font-inter mb-4">Lokasi Kami</h3>
-          <p className="text-[#4F4F4F] text-[14px] md:text-[16px] lg:text-[18px]">
+          <p className="text-[#4F4F4F] text-[14px] md:text-[16px] lg:text-[18px] font-inter">
             Temukan toko Utomo Mur Baut & Teknik dengan mudah melalui peta di bawah ini.
           </p>
           <iframe
