@@ -1,20 +1,37 @@
+"use client";
+
+import { easeOut, motion } from "framer-motion";
 export default function ProdukHero() {
   return (
     <section className="w-full py-32 bg-white">
       <div className="container mx-auto flex items-center justify-between px-6">
         
-        <div>
-          <p className="text-sm text-gray-500 mb-2">Produk</p>
+        <motion.div
+        initial={{opacity :0, y:-40}}
+        whileInView={{opacity:1, y:0}}
+        transition={{duration: 0.6, ease: easeOut}}
+        viewport={{once : true}}
+        >
 
-          <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
+          <p className="text-xs text-gray-500 mb-2">Produk</p>
+
+          <h1 className="text-3xl md:text-4xl font-semibold leading-tight">
             <span className="text-[#2A2F9A]">Produk Teknik Lengkap</span>{" "}
             <span className="text-[#F15A24]">dan Berkualitas</span>
           </h1>
-        </div>
+        </motion.div>
 
-        <button className="bg-[#F15A24] text-white px-8 py-4 rounded-xl hover:opacity-90 transition font-medium">
+        <motion.div
+        initial={{opacity : 0, x : 40}}
+        whileInView={{opacity : 1, x : 0}}
+        transition={{duration : 0.8, ease : easeOut}}
+        viewport={{once : true}}
+        >
+
+        <button className="bg-[#F15A24] text-white px-8 py-4 rounded-xl hover:opacity-90 transition font-medium whitespace-nowrap">
           Lihat Katalog
         </button>
+        </motion.div>
 
       </div>
     </section>

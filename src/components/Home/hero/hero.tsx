@@ -16,7 +16,7 @@ export default function Hero() {
                 
                     <p className="text-gray-300 mb-3 text-lg">Toko Teknik</p>
 
-                    <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+                    <h1 className="text-3xl md:text-3xl font-bold leading-tight max-w-lg">
                         Solusi Baut & Alat Teknik Lengkap <br />
                         <span className="text-orange-500">
                             Di Pusat Kota Temanggung

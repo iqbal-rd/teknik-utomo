@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import {easeOut, motion} from "framer-motion";
 
 export default function TestimoniSlider() {
 
@@ -48,11 +49,27 @@ export default function TestimoniSlider() {
     return(
         <section className="bg-[#071A4A] text-white py-28 px-6 md:px-16">
             <div className="max-w-6xl mx-auto text-center">
+                <motion.div
+                initial={{ opacity : 0, x : -40}}
+                whileInView={{opacity : 1, x : 0}}
+                transition={{duration: 0.6, ease : easeOut}}
+                viewport={{once : true}}
+                >
+
                 <p className="text-sm text-gray-300">Testimoni</p>
                     <h2 className="text-3xl md:text-4xl font-bold mt-2">
                         Apa Kata <span className="text-orange-500">Pelanggan</span>
                     </h2>
 
+                </motion.div>
+
+                <motion.div
+                initial={{opacity : 0, x : 40}}
+                whileInView={{opacity : 1, x : 0}}
+                transition={{duration : 0.8, ease : easeOut}}
+                viewport={{once : true}}
+                
+                >
                     <div className="relative mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
 
                         {visibleSlide.map((item, i) =>(
@@ -104,6 +121,9 @@ export default function TestimoniSlider() {
                                 </button>
                         ))}
                     </div>
+
+                </motion.div>
+
             </div>
         </section>
     );

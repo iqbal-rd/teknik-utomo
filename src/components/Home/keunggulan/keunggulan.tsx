@@ -1,4 +1,8 @@
+"use client";
+
+
 import Image from "next/image";
+import{ motion } from "framer-motion";
 export default function Keunggulan() {
     const item = [
         {
@@ -36,14 +40,30 @@ export default function Keunggulan() {
     return (
         <section className="bg-[#071a4a] text-white px-6 md:px-16 py-20">
             <div className="max-w-7xl mx-auto">
+
+                {/* {ANIMASI JUDUL} */}
+                <motion.div
+                initial={{opacity: 0, y: -40}}
+                whileInView={{opacity: 1, y: 0}}
+                transition={{duration: 0.6, ease: "easeOut"}}
+                viewport={{ once: true }}
+                >
+
                 {/* {Judul} */}
                 <p className="text-sm text-gray-300">Keunggulan</p>
                 <h2 className="text-3xl md:text-4xl font-bold mt-2">
                     Kenapa memilih <span className="text-orange-500">Kami?</span>
                 </h2>
+                </motion.div>
 
+                {/* {Animasi Grid} */}
+                <motion.div
+                className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12"
+                initial= {{ opacity: 0, y: 40}}
+                whileInView= {{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease:"easeOut"}}
+                viewport={{ once:true }}>
                 {/* {Grid} */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
                     {item.map((item, index) =>(
                         <div 
                           key={index}
@@ -68,7 +88,7 @@ export default function Keunggulan() {
                      )
                   )
                 }
-                </div>
+                </motion.div>
             </div>
         </section>
     )
