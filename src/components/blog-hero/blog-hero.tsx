@@ -1,12 +1,24 @@
+"use client";
+
+import {easeOut, motion} from "framer-motion";
+
 export default function BlogHero() {
   return (
     <section className="w-full py-32 bg-white">
+
+      <motion.div
+      initial={{opacity : 0, y: -40}}
+      whileInView={{opacity : 1, y: 0}}
+      transition={{duration: 0.8, ease: easeOut}}
+      viewport={{once : true}}
+      >
+
       <div className="container mx-auto flex items-center justify-between px-6">
         
         <div>
           <p className="text-sm text-gray-500 mb-2">Blog</p>
 
-          <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
+          <h1 className="text-4xl md:text-4xl font-semibold leading-tight">
             <span className="text-[#2A2F9A]">Berita & Blog</span>{" "}
             <span className="text-[#F15A24]">Terbaru Kami</span>
           </h1>
@@ -17,6 +29,7 @@ export default function BlogHero() {
         </button>
 
       </div>
+      </motion.div>
     </section>
   );
 }
