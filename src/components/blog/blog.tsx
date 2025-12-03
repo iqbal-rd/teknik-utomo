@@ -44,8 +44,8 @@ export default function Katalog() {
     >
       {/* TITLE */}
       <div className="text-center mb-16">
-        <p className="text-lg text-blue-700 mb-2">Blog</p>
-        <h1 className="text-4xl font-bold text-blue-700">
+        <p className="text-lg text-[#2F2D93] mb-2">Blog</p>
+        <h1 className="text-4xl font-bold text-[#2F2D93]">
           Berita & Blog <span className="text-orange-500">Terbaru Kami</span>
         </h1>
       </div>
@@ -76,7 +76,7 @@ export default function Katalog() {
             <input
               type="text"
               placeholder="Search"
-              className="w-full py-2 focus:outline-none"
+              className="w-full py-2 focus:outline-none text-[#2F2D93]"
             />
             <span className="text-blue-700">🔍</span>
           </div>
@@ -101,7 +101,7 @@ export default function Katalog() {
       {/* FAQ SECTION */}
       <div className="w-full mt-24 px-4 md:px-24">
         <h2 className="text-center text-4xl md:text-5xl font-bold mb-4">
-          <span className="text-blue-700">Pertanyaan yang </span>
+          <span className="text-[#2F2D93]">Pertanyaan yang </span>
           <span className="text-orange-500">Sering Diajukan</span>
         </h2>
 

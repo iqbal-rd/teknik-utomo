@@ -16,7 +16,7 @@ export default function BlogHero() {
       <div className="container mx-auto flex items-center justify-between px-6">
         
         <div>
-          <p className="text-sm text-gray-500 mb-2">Blog</p>
+          <p className="text-[#2F2D93] text-[14px] md:text-[16px] lg:text-[18px] mb-1">Blog</p>
 
           <h1 className="text-4xl md:text-4xl font-semibold leading-tight">
             <span className="text-[#2A2F9A]">Berita & Blog</span>{" "}

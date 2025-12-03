@@ -132,7 +132,7 @@ export default function ContactPage() {
                 px-8 py-2 rounded-lg font-medium text-[14px] md:text-[16px] transition 
                 ${isFormValid
                   ? "bg-[#F05A28] text-white hover:bg-[#F37744] cursor-pointer"
-                  : "bg-gray-300 text-gray-600 cursor-not-allowed"}
+                  : "bg-[#F05A28] text-white cursor-not-allowed disabled:opacity-50"}
               `}
             >
               Kirim Pesan
