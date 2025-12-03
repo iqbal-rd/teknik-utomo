@@ -5,16 +5,16 @@ import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
 const brandLogos = [
-  { src: "/brand/wipro.png", alt: "Wipro Logo" },
-  { src: "/brand/tiapmata.png", alt: "Tjap Mata Logo" },
-  { src: "/brand/modern.png", alt: "Modern Power Tools Logo" },
-  { src: "/brand/bison.png", alt: "bison" },
-  { src: "/brand/makita.png", alt: "makita Logo" },
-  { src: "/brand/mollar.png", alt: "mollar Logo" },
-  { src: "/brand/raigor.png", alt: "raigor Logo" },
-  { src: "/brand/tekiro.png", alt: "tekiro Logo" },
-  { src: "/brand/taho.png", alt: "toho Logo" },
-  { src: "/brand/haston.png", alt: "haston Logo" },
+  { src: "/Brand/wipro.png", alt: "Wipro Logo" },
+  { src: "/Brand/tjap-mata.png", alt: "Tjap Mata Logo" },
+  { src: "/Brand/modern.png", alt: "Modern Power Tools Logo" },
+  { src: "/Brand/bison.png", alt: "bison" },
+  { src: "/Brand/makita.png", alt: "makita Logo" },
+  { src: "/Brand/mollar.png", alt: "mollar Logo" },
+  { src: "/Brand/raigor.png", alt: "raigor Logo" },
+  { src: "/Brand/tekiro.png", alt: "tekiro Logo" },
+  { src: "/Brand/toho.png", alt: "toho Logo" },
+  { src: "/Brand/haston.png", alt: "haston Logo" },
 ];
 
 const logo = [...brandLogos, ...brandLogos];
@@ -24,13 +24,13 @@ export default function Brand() {
       {/* Brand Section */}
       <section className="bg-gray-50 py-16">
         <div className="overflow-x-hidden max-w-[430px] md:max-w-[744px] lg:max-w-[1440px] mx-auto px-[28px] md:px-[44px] lg:px-[88px] pt-[70px] md:pt-[90px] lg:pt-[160px]">
-          <h2 className="text-sm text-[#2F2D93]">Brand</h2>
+          <h2 className="text-base text-[#2F2D93] font-inter">Brand</h2>
 
-          <h1 className="text-3xl font-bold mt-2 text-[#2F2D93]">
+          <h1 className="text-[#2F2D93] text-[20px] md:text-[24px] lg:text-[32px] font-poppins font-semibold mb-2.5 md:mb-5 lg:mb-[30px]">
             Merek Ternama, <span className="text-orange-600">Kualitas yang Terbukti</span>
           </h1>
 
-          <p className="text-gray-700 leading-relaxed mt-4 text-justify">
+          <p className="text-gray-700 text-lg leading-relaxed mt-4 text-justify font-inter">
             Kami hanya menghadirkan produk dari merek-merek terbaik yang telah terbukti kualitas dan ketahanannya.
             Kepercayaan pelanggan dimulai dari produk yang tepat—itulah komitmen kami dalam memilih brand terpercaya untuk Anda.
           </p>

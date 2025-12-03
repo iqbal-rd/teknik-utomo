@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+
 import { useState } from "react";
 
 export default function Header() {
@@ -23,22 +24,11 @@ export default function Header() {
 
       {/* {Top Bar} */}
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
-        
+
         {/* Logo */}
 
         <div className="flex items-center space-x-3">
-          <Image
-            src="/logo.svg"
-            alt="Utomo Logo"
-            width={150}
-            height={100}
-          />
-          {/* <div>
-            <h1 className="text-2xl font-bold text-orange-600">UTOMO</h1>
-            <p className="text-xs text-blue-900 tracking-wider">
-              TOKO MUR BAUT DAN TEKNIK
-            </p>
-          </div> */}
+          <Image src="/logo.svg" alt="Utomo Logo" width={150} height={100} />
         </div>
 
         {/* Navigasi Desktop */}
@@ -66,6 +56,7 @@ export default function Header() {
 
         {/* Tombol Kanan */}
         <div className="hidden md:block">
+
           <Link
             href="/kontak"
             className="bg-orange-600 text-white px-5 py-2 rounded-md font-semibold hover:bg-orange-700 transition"

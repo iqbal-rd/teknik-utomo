@@ -1,99 +1,152 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 export default function ContactPage() {
+  // State untuk form
+  const [nama, setNama] = useState("");
+  const [phone, setPhone] = useState("");
+  const [subjek, setSubjek] = useState("");
+  const [pesan, setPesan] = useState("");
+
+  const [isFormValid, setIsFormValid] = useState(false);
+
+  // Cek validasi form setiap kali ada perubahan input
+  useEffect(() => {
+    if (nama.trim() && phone.trim() && pesan.trim()) {
+      setIsFormValid(true);
+    } else {
+      setIsFormValid(false);
+    }
+  }, [nama, phone, subjek, pesan]);
+
   return (
     <section className="overflow-hidden max-w-[430px] md:max-w-[744px] lg:max-w-[1440px] mx-auto px-[28px] md:px-[44px] lg:px-[88px] pt-[70px] mb-[30px] md:pt-[90px] md:mb-[40px] lg:pt-[140px] lg:mb-[80px]">
-      <p className="text-[#2F2D93] text-[14px] md:text-[16px] lg:text-[18px] mb-1 text-center">
+      <p className="text-[#2F2D93] text-[14px] md:text-[16px] lg:text-[18px] mb-1 text-center font-inter">
         Contact
       </p>
-      <h2 className="text-center text-3xl font-semibold text-blue-900 mb-8">
+      <h2 className="text-center text-3xl font-semibold text-blue-900 font-poppins mb-8">
         Hubungi<span className="text-orange-500"> Kami</span>
       </h2>
+
       {/* Info Kontak */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-2.5 md:gap-5 mb-[30px] md:mb-[40px] lg:mb-[80px]">
         <div className="bg-[#0F2464] px-2.5 py-3 md:pt-4 md:pb-9 lg:py-5 rounded-lg flex md:flex-col lg:flex-row justify-center items-center gap-2.5">
           <Phone className="text-orange-400" size={50} />
-          <h3 className="text-white text-[14px] md:text-[16px] lg:text-[20px] font-semibold truncate">0896 - 4338 - 0202</h3>
+          <h3 className="text-white text-[14px] md:text-[16px] lg:text-[20px] font-inter font-semibold truncate">
+            0896 - 4338 - 0202
+          </h3>
         </div>
 
         <div className="bg-[#0F2464] px-2.5 py-3 md:pt-4 md:pb-9 lg:py-5 rounded-lg flex md:flex-col lg:flex-row justify-center items-center gap-2.5">
           <Mail className="text-orange-400" size={50} />
-          <h3 className="text-white text-[14px] md:text-[16px] lg:text-[20px] font-semibold truncate">murbaututomo@gmail.com</h3>
+          <h3 className="text-white text-[14px] md:text-[16px] lg:text-[20px] font-inter font-semibold truncate">
+            murbaututomo@gmail.com
+          </h3>
         </div>
 
         <div className="bg-[#0F2464] px-2.5 py-3 md:pt-4 md:pb-9 lg:py-5 rounded-lg flex md:flex-col lg:flex-row justify-center items-center gap-2.5">
           <MapPin className="text-orange-400" size={50} />
-          <h3 className="text-white text-[14px] md:text-[16px] lg:text-[20px] font-semibold truncate">Temanggung</h3>
+          <h3 className="text-white text-[14px] md:text-[16px] lg:text-[20px] font-inter font-semibold truncate">
+            Temanggung
+          </h3>
         </div>
       </div>
 
       {/* Form dan Peta */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-[30px] lg:gap-5">
-        {/* Form */}
-        <form className="bg-white p-6 rounded-xl shadow-md space-y-4 border border-[#EEEEEE] style-opacity-1 transform-none"
-        >
-          <h3 className="text-black text-2xl font-semibold mb-4">Kirim Pesan Kepada Kami</h3>
 
+        {/* Form */}
+        <form className="bg-white p-6 rounded-xl shadow-md space-y-4 border border-[#EEEEEE]">
+
+          <h3 className="text-black text-2xl font-semibold font-poppins mb-4">
+            Kirim Pesan Kepada Kami
+          </h3>
+
+          {/* Nama */}
           <div>
-            <label className="text-black block text-sm font-medium mb-1">
+            <label className="text-black block text-sm font-medium font-inter mb-1">
               Nama<span className="text-red-500">*</span>
             </label>
             <input
               type="text"
               placeholder="Nama"
-              className="text-black w-full border-1 border-[#888888] rounded-lg px-3 py-2 focus:ring-0 focus:ring-black-400 outline-none text-[12px] md:text-[14px] lg:text-[16px]"
+              className="text-black w-full border-1 border-[#888888] rounded-lg px-3 py-2 outline-none"
+              value={nama}
+              onChange={(e) => setNama(e.target.value)}
               required
             />
           </div>
 
+          {/* Phone */}
           <div>
-            <label className="text-black block text-sm font-medium mb-1">
+            <label className="text-black block text-sm font-medium font-inter mb-1">
               Phone<span className="text-red-500">*</span>
             </label>
             <input
               type="text"
               placeholder="Nomor HP"
-              className="text-black w-full border-1 border-[#888888] rounded-lg px-3 py-2 focus:ring-0 focus:ring-orange-400 outline-none"
+              className="text-black w-full border-1 border-[#888888] rounded-lg px-3 py-2 outline-none"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
               required
             />
           </div>
 
+          {/* Subjek */}
           <div>
-            <label className="text-black block text-sm font-medium mb-1">Subjek</label>
+            <label className="text-black block text-sm font-medium font-inter mb-1">
+              Subjek
+            </label>
             <input
               type="text"
               placeholder="Subjek"
-              className="text-black w-full border-1 border-[#888888] rounded-lg px-3 py-2 focus:ring-0 focus:ring-orange-400 outline-none"
+              className="text-black w-full border-1 border-[#888888] rounded-lg px-3 py-2 outline-none"
+              value={subjek}
+              onChange={(e) => setSubjek(e.target.value)}
             />
           </div>
 
+          {/* Pesan */}
           <div>
-            <label className="text-black block text-sm font-medium mb-1">
+            <label className="text-black block text-sm font-medium font-inter mb-1">
               Pesan<span className="text-red-500">*</span>
             </label>
             <textarea
               rows={4}
               placeholder="Tulis pesan Anda disini"
-              className="text-black w-full border-1 border-[#888888] rounded-lg px-3 py-2 focus:ring-0 focus:ring-orange-400 outline-none"
+              className="text-black w-full border-1 border-[#888888] rounded-lg px-3 py-2 outline-none"
+              value={pesan}
+              onChange={(e) => setPesan(e.target.value)}
               required
             ></textarea>
           </div>
+
+          {/* Button */}
           <div className="flex justify-end lg:mt-4 items-end">
-          <button
-            type="submit"
-            className="bg-orange-400 hover:bg-orange-500 text-white px-5 py-2 rounded-lg font-semibold transition"
-          >
-            Kirim Pesan
-          </button>
+            <button
+              type="submit"
+              disabled={!isFormValid}
+              className={`
+                px-8 py-2 rounded-lg font-medium text-[14px] md:text-[16px] transition 
+                ${isFormValid
+                  ? "bg-[#F05A28] text-white hover:bg-[#F37744] cursor-pointer"
+                  : "bg-gray-300 text-gray-600 cursor-not-allowed"}
+              `}
+            >
+              Kirim Pesan
+            </button>
           </div>
+
         </form>
 
         {/* Lokasi */}
         <div>
-          <h3 className="text-black text-2xl font-semibold font-inter mb-4">Lokasi Kami</h3>
-          <p className="text-[#4F4F4F] text-[14px] md:text-[16px] lg:text-[18px]">
+          <h3 className="text-black text-2xl font-semibold font-inter mb-4">
+            Lokasi Kami
+          </h3>
+          <p className="text-[#4F4F4F] text-[14px] md:text-[16px] lg:text-[18px] font-inter">
             Temukan toko Utomo Mur Baut & Teknik dengan mudah melalui peta di bawah ini.
           </p>
           <iframe
