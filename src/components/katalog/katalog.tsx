@@ -17,7 +17,7 @@ export default function Katalog() {
         >
             <div className="max-w-7xl mx-auto px-6 md:px-12">
                 {/* {Title} */}
-                <h1 className="text-4xl font-bold text-center mb-16">
+                <h1 className="text-4xl text-[#2A2F9A] font-bold text-center mb-16">
                     KATALOG <span className="text-orange-500">PRODUK</span>
                 </h1>
 
@@ -28,7 +28,7 @@ export default function Katalog() {
                     <div className="border rounded-xl p-6 shadow-sm">
 
                         {/* {Search} */}
-                        <h3 className="text-lg font-semibold mb-4">Search</h3>
+                        <h3 className="text-lg text-[#2A2F9A] font-semibold mb-4">Search</h3>
                         <div className="flex items-center border border-orange-400 rounded-lg px-3">
                             <input 
                             type="Text"
@@ -39,12 +39,12 @@ export default function Katalog() {
                         </div>
 
                         {/* {Katagori} */}
-                        <h3 className="text-lg font-semibold mt-8 mb-4">Katagori</h3>
+                        <h3 className="text-lg text-[#2A2F9A] font-semibold mt-8 mb-4">Katagori</h3>
                         <div className="space-y-3">
-                            <button className="w-full border rounded-lg py-3 hover:bg-orange-50 transition">
+                            <button className="w-full border border-gray-300 rounded-lg py-3 hover:bg-orange-50 transition text-[#2A2F9A]">
                                 Semua Produk
                             </button>
-                            <button className="w-full border rounded-lg py-3 hover:bg-orange-50 transition">
+                            <button className="w-full border border-gray-300 rounded-lg py-3 hover:bg-orange-50 transition text-[#2A2F9A]">
                                 Best Seller
                             </button>
                         </div>

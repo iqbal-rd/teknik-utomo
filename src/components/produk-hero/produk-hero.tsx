@@ -1,6 +1,7 @@
 "use client";
 
 import { easeOut, motion } from "framer-motion";
+
 export default function ProdukHero() {
   return (
     <section className="w-full py-32 bg-white">
