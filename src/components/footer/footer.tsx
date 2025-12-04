@@ -9,8 +9,7 @@ export default function Footer() {
 
       {/* BAGIAN ATAS */}
       <div
-        className="bg-[#0F2464] w-full text-[#F2F2F2] font-poppins py-5 px-6 md:py-5 md:px-[44px] lg:px-[88px]
-           grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-[30px] lg:gap-6"
+        className="bg-[#0F2464] w-full text-[#F2F2F2] font-poppins py-5 px-6 md:py-5 md:px-[44px] lg:px-[88px] grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-[30px] lg:gap-6"
 
       >
 
