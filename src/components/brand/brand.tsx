@@ -20,10 +20,10 @@ export default function Brand() {
             <div className="max-w-6xl mx-auto px-6">
 
                 {/* {Label} */}
-                <p className="text-blue-700 mb-2 text-sm font-semibold">Brand</p>
+                <p className="text-[#2F2D93] mb-2 text-sm font-semibold">Brand</p>
 
                 {/* {Title} */}
-                <h2 className="text-4xl font-bold text-gray-900 leading-snug">
+                <h2 className="text-4xl font-bold text-[#2F2D93] leading-snug">
                     Merek Ternama,<span className="text-orange-500">Kualitas Yang Terbukti</span>
                 </h2>
 

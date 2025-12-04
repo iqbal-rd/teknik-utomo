@@ -18,6 +18,7 @@ export default function Katalog() {
             <div className="max-w-7xl mx-auto px-6 md:px-12">
                 {/* {Title} */}
                 <h1 className="text-4xl text-[#2A2F9A] font-bold text-center mb-16">
+
                     KATALOG <span className="text-orange-500">PRODUK</span>
                 </h1>
 
@@ -29,16 +30,18 @@ export default function Katalog() {
 
                         {/* {Search} */}
                         <h3 className="text-lg text-[#2A2F9A] font-semibold mb-4">Search</h3>
+
                         <div className="flex items-center border border-orange-400 rounded-lg px-3">
                             <input 
                             type="Text"
                             placeholder="Search"
-                            className="w-full py-2 focus:outline-none"
+                            className="w-full py-2 focus:outline-none text-[#2F2D93]"
                             />
                             <span className="text-gray-500">🔍</span>
                         </div>
 
                         {/* {Katagori} */}
+
                         <h3 className="text-lg text-[#2A2F9A] font-semibold mt-8 mb-4">Katagori</h3>
                         <div className="space-y-3">
                             <button className="w-full border border-gray-300 rounded-lg py-3 hover:bg-orange-50 transition text-[#2A2F9A]">

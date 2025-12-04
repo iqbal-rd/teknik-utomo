@@ -12,7 +12,7 @@ export default function Keunggulan() {
             transition={{duration: 0.6, ease: "easeOut"}}
             viewport={{ once: true }}
             >
-        <section className="bg-[#0b1e4e] text-white py-10">
+        <section className="bg-[#0F2464] pt-5 pb-[30px] md:py-[28px] lg:py-[40px] mt-[30px] md:mt-[40px] lg:mt-[80px]">
           <div className="max-w-[430px] md:max-w-[744px] lg:max-w-[1440px] mx-auto px-[28px] md:px-[44px] lg:px-[88px]">
             <p className="text-[#F2F2F2] text-[14px] md:text-[16px] lg:text-[18px] mb-1">Keunggulan</p>
             

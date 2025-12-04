@@ -1,12 +1,17 @@
+"use client";
+
 import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0A1C5A] w-full text-[#F2F2F2] font-poppins py-5 px-6 md:py-5 md:px-[44px]">
+
+    <footer className="border-t border-[#F2F2F2]">
 
       {/* BAGIAN ATAS */}
       <div
-        className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-[30px] lg:gap-6">
+        className="bg-[#0F2464] w-full text-[#F2F2F2] font-poppins py-5 px-6 md:py-5 md:px-[44px] lg:px-[88px]
+                   grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-[30px] lg:gap-6"
+      >
 
         {/* KOLOM KIRI */}
         <div>
@@ -48,17 +53,18 @@ export default function Footer() {
         </div>
 
         {/* KOLOM KANAN → Navigasi + Hubungi Kami */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+
+        <div className="grid grid-cols-1 md:flex md:justify-end md:items-start gap-6 md:gap-[40px]">
 
           {/* NAVIGASI */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Navigasi</h3>
             <ul className="space-y-3 text-sm">
-              <li><a href="#" className="hover:underline">Beranda</a></li>
-              <li><a href="#" className="hover:underline">Tentang Kami</a></li>
-              <li><a href="#" className="hover:underline">Produk</a></li>
-              <li><a href="#" className="hover:underline">Blog</a></li>
-              <li><a href="#" className="hover:underline">Kontak</a></li>
+              <li><a href="#" className="cursor-default hover:underline">Beranda</a></li>
+              <li><a href="#" className="cursor-default hover:underline">Tentang Kami</a></li>
+              <li><a href="#" className="cursor-default hover:underline">Produk</a></li>
+              <li><a href="#" className="cursor-default hover:underline">Blog</a></li>
+              <li><a href="#" className="cursor-default hover:underline">Kontak</a></li>
             </ul>
           </div>
 
@@ -82,19 +88,14 @@ export default function Footer() {
       </div>
 
       {/* BAGIAN BAWAH */}
-      <div className="w-full bg-[#F0682A] mt-10">
-        <div
-          className="max-w-7xl mx-auto px-6 py-8 
-                     flex flex-col md:flex-row justify-between 
-                     text-sm text-white/90"
-        >
-          <p className="text-center md:text-left">Copyright 2025 Utomo. All Rights Reserved</p>
+      <div className="bg-[#EF5B25] text-[#E2E2E2] text-[14px] md:text-[16px] lg:text-[18px] px-4 py-5 md:px-[44px] md:py-2.5 lg:px-[88px] lg:py-5 grid grid-cols-1 md:grid-cols-[1fr_auto]">
+          <p className="order-2 md:order-1 text-center md:text-left cursor-default hover:underline underline-offset-2">Copyright 2025 Utomo. All Rights Reserved</p>
 
-          <div className="flex justify-center md:justify-end space-x-8 mt-2 md:mt-0">
-            <a href="#" className="hover:underline">Terms of Service</a>
-            <a href="#" className="hover:underline">Privacy Policy</a>
+          <div className="order-1 md:order-2 flex justify-between gap-[56px]">
+            <a href="#" className="cursor-default hover:underline">Terms of Service</a>
+            <a href="#" className="cursor-default hover:underline">Privacy Policy</a>
           </div>
-        </div>
+        
       </div>
 
     </footer>
