@@ -22,7 +22,7 @@ export default function Brand() {
   return (
     <div className="w-full">
       {/* Brand Section */}
-      <section className="bg-gray-50 py-16">
+      <section className="bg-gray-50">
         <div className="overflow-x-hidden max-w-[430px] md:max-w-[744px] lg:max-w-[1440px] mx-auto px-[28px] md:px-[44px] lg:px-[88px] pt-[70px] md:pt-[90px] lg:pt-[160px]">
           <h2 className="text-base text-[#2F2D93] font-inter">Brand</h2>
 

@@ -37,7 +37,7 @@ export default function Header() {
                 href={item.url}
                 className={`
                   font-medium transition
-                  ${active ? "text-[#F05A28] underline underline-offset-2 cursor-pointer" : "text-[#2F2D93] hover:text-orange-600 cursor-default hover:underline"}
+                  ${active ? "text-[#F05A28] underline underline-offset-2 cursor-pointer" : "text-[#2F2D93] hover:text-orange-600 hover:underline"}
                 `}
               >
                 {item.label}

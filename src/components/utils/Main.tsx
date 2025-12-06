@@ -18,7 +18,7 @@ export default function Main({
       <main
         id={id}
         className={cn(
-          "bg-slate-50 flex flex-col gap-[50px] md:gap-[75px] lg:gap-[100px] py-10 md:py-15 lg:py-20",
+          "bg-slate-50 flex flex-col gap-[50px] md:gap-[75px] lg:gap-[100px]",
           className,
         )}
       >

@@ -81,7 +81,6 @@ export default function Keunggulan() {
                   Kami siap memberikan rekomendasi produk terbaik sesuai kebutuhan, membantu pelanggan memilih baut, mur, atau perlengkapan teknik yang paling tepat untuk proyek yang sedang dikerjakan.
                 </p></div>
               </div>
-
             </div>
           </div>
         </section>

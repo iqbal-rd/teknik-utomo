@@ -9,7 +9,6 @@ export default function Katalog() {
 
   const [open, setOpen] = useState<number | null>(null);
 
-  // FAQ sekarang berupa object dengan question + answer
   const faqList = [
     {
       question: "Apakah Produk Yang Dibutuhkan Tersedia ?",
@@ -27,8 +26,7 @@ export default function Katalog() {
         "Kami melayani pengiriman dalam kota dan luar kota menggunakan jasa ekspedisi pilihan pelanggan.",
     },
     {
-      question:
-        "Apakah Bisa Konsultasi Terlebih Dahulu Sebelum Membeli ?",
+      question: "Apakah Bisa Konsultasi Terlebih Dahulu Sebelum Membeli ?",
       answer:
         "Tentu, pelanggan dapat berkonsultasi mengenai spesifikasi dan kebutuhan teknis sebelum membeli.",
     },
@@ -52,13 +50,9 @@ export default function Katalog() {
 
       {/* GRID LAYOUT */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-10 px-6 md:px-12">
-        {/* MAIN CONTENT */}
         <div className="md:col-span-3 order-2 md:order-1 flex flex-col items-center">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
-            {/* Kartu blog */}
-          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full"></div>
 
-          {/* PAGINATION */}
           <div className="flex gap-4 mt-10">
             <button className="px-6 py-2 border rounded-lg text-gray-600 hover:bg-gray-100">
               Prev
@@ -88,49 +82,80 @@ export default function Katalog() {
             <button className="w-full border border-blue-300 rounded-lg py-3 text-blue-700 hover:bg-blue-50 transition">
               Semua Blog
             </button>
-            <button className="w-full border border-blue-300 rounded-lg py-3 text-blue-700 hover:bg-blue-50 transition">
+            {/* <button className="w-full border border-blue-300 rounded-lg py-3 text-blue-700 hover:bg-blue-50 transition">
               Tips & Edukasi
             </button>
             <button className="w-full border border-blue-300 rounded-lg py-3 text-blue-700 hover:bg-blue-50 transition">
               Promo
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
 
       {/* FAQ SECTION */}
-      <div className="w-full mt-24 px-4 md:px-24">
+      <div className="max-w-[430px] md:max-w-[744px] lg:max-w-[1440px] mx-auto px-[28px] md:px-[44px] lg:px-[88px] pb-[30px] md:pb-[40px] lg:pb-[80px]">
         <h2 className="text-center text-4xl md:text-5xl font-bold mb-4">
           <span className="text-[#2F2D93]">Pertanyaan yang </span>
           <span className="text-orange-500">Sering Diajukan</span>
         </h2>
 
         <p className="text-center text-gray-600 text-lg md:text-xl mb-14">
-          Temukan jawaban atas berbagai pertanyaan umum mengenai produk dan
-          layanan kami di sini.
+          Temukan jawaban atas berbagai pertanyaan umum mengenai produk dan layanan kami di sini.
         </p>
 
-        <div className="space-y-6 max-w-5xl mx-auto w-full">
+        <div className="md:col-span-8">
           {faqList.map((item, i) => (
             <div
               key={i}
-              className="border rounded-2xl p-7 md:p-8 shadow-sm bg-white cursor-pointer"
+              className="border border-[#B8B8B8] rounded-xl mb-4 cursor-pointer"
               onClick={() => setOpen(open === i ? null : i)}
             >
-              <div className="flex justify-between items-center">
-                <p className="text-xl md:text-2xl font-medium text-gray-700">
+              {/* HEADER + BUTTON */}
+              <div className="w-full text-left px-4 py-3 flex items-center justify-between gap-4">
+                <p className="text-[#4F4F4F] text-[16px] md:text-[20px] lg:text-[22px] font-semibold">
                   {item.question}
                 </p>
 
-                <motion.span
-                  animate={{ rotate: open === i ? 180 : 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="text-orange-500 text-3xl md:text-4xl"
+                <motion.div
+                  animate={{ rotate: open === i ? 360 : 0 }}
+                  transition={{ duration: 0.25 }}
+                  className={`w-9 h-9 md:w-10 md:h-10 rounded-full flex items-center justify-center transition-all duration-300
+                    ${open === i ? "bg-gray-200" : "bg-[#F05A28]"}
+                  `}
                 >
-                  ▼
-                </motion.span>
+                  {open === i ? (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#F05A28"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="m18 15-6-6-6 6"></path>
+                    </svg>
+                  ) : (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="22"
+                      height="22"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#ffffff"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="m6 9 6 6 6-6"></path>
+                    </svg>
+                  )}
+                </motion.div>
               </div>
 
+              {/* ANSWER */}
               <AnimatePresence>
                 {open === i && (
                   <motion.div
@@ -138,7 +163,7 @@ export default function Katalog() {
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="mt-4 text-gray-600 text-lg md:text-xl"
+                    className="px-4 overflow-hidden text-[#4F4F4F] text-[14px] md:text-[16px] lg:text-[18px] pb-3 md:pb-5"
                   >
                     {item.answer}
                   </motion.div>
