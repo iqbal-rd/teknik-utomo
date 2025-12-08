@@ -20,9 +20,14 @@ export default function Header() {
 
   return (
     <header className="w-full bg-white shadow-sm fixed top-0 z-50">
-      <div className="flex shadow-lg fixed items-center justify-between gap-2 w-full h-[40px] md:h-[60px] lg:h-[80px] px-[14px] py-2.5 md:px-[26px] md:py-4 lg:px-[64px] lg:py-6 transition-colors duration-300 z-50 bg-white
-        }">
-
+      <div
+        className="
+          flex items-center justify-between gap-2
+          w-full h-[40px] md:h-[60px] lg:h-[80px]
+          px-[14px] py-2.5 md:px-[26px] md:py-4 lg:px-[64px] lg:py-6
+          transition-colors duration-300 bg-white
+        "
+      >
         {/* LOGO */}
         <Image src="/logo.svg" alt="Utomo Logo" width={150} height={100} />
 
@@ -37,7 +42,11 @@ export default function Header() {
                 href={item.url}
                 className={`
                   font-medium transition
-                  ${active ? "text-[#F05A28] underline underline-offset-2 cursor-pointer" : "text-[#2F2D93] hover:text-orange-600 hover:underline"}
+                  ${
+                    active
+                      ? "text-[#F05A28] underline underline-offset-2 cursor-pointer"
+                      : "text-[#2F2D93] hover:text-orange-600 hover:underline"
+                  }
                 `}
               >
                 {item.label}
@@ -57,10 +66,7 @@ export default function Header() {
         </div>
 
         {/* MOBILE BURGER */}
-        <button
-          className="md:hidden text-blue-700"
-          onClick={() => setOpen(true)}
-        >
+        <button className="md:hidden text-blue-700" onClick={() => setOpen(true)}>
           <Menu size={32} />
         </button>
       </div>
@@ -76,8 +82,9 @@ export default function Header() {
       {/* MOBILE SLIDE MENU */}
       <div
         className={`
-          fixed top-0 right-0 h-full w-[70%] max-w-[300px] bg-white shadow-lg z-50 
-          p-6 flex flex-col gap-6 transition-transform duration-300
+          fixed top-0 right-0 h-full w-[70%] max-w-[300px]
+          bg-white shadow-lg z-50 p-6 flex flex-col gap-6
+          transition-transform duration-300
           ${open ? "translate-x-0" : "translate-x-full"}
         `}
       >
@@ -101,7 +108,7 @@ export default function Header() {
                 onClick={() => setOpen(false)}
                 className={`
                   transition
-                  ${active ? "text-orange-600 font-semibold" : ""}
+                  ${active ? "text-[#F05A28] underline underline-offset-2 cursor-pointer" : ""}
                 `}
               >
                 {item.label}
