@@ -5,16 +5,16 @@ import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
 const brandLogos = [
-  { src: "/brand/wipro.png", alt: "Wipro Logo" },
-  { src: "/brand/tjap mata.png", alt: "Tjap Mata Logo" },
-  { src: "/brand/modern.png", alt: "Modern Power Tools Logo" },
-  { src: "/brand/bison.png", alt: "bison" },
-  { src: "/brand/makita.png", alt: "makita Logo" },
-  { src: "/brand/mollar.png", alt: "mollar Logo" },
-  { src: "/brand/raigor.png", alt: "raigor Logo" },
-  { src: "/brand/tekiro.png", alt: "tekiro Logo" },
-  { src: "/brand/toho.png", alt: "toho Logo" },
-  { src: "/brand/haston.png", alt: "haston Logo" },
+  { src: "/Brand/wipro.png", alt: "Wipro Logo" },
+  { src: "/Brand/tjap mata.png", alt: "Tjap Mata Logo" },
+  { src: "/Brand/modern.png", alt: "Modern Power Tools Logo" },
+  { src: "/Brand/bison.png", alt: "bison" },
+  { src: "/Brand/makita.png", alt: "makita Logo" },
+  { src: "/Brand/mollar.png", alt: "mollar Logo" },
+  { src: "/Brand/raigor.png", alt: "raigor Logo" },
+  { src: "/Brand/tekiro.png", alt: "tekiro Logo" },
+  { src: "/Brand/toho.png", alt: "toho Logo" },
+  { src: "/Brand/haston.png", alt: "haston Logo" },
 ];
 
 const logo = [...brandLogos, ...brandLogos];
