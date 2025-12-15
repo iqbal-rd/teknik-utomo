@@ -27,11 +27,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="id">
-      <body className={`${inter.variable} ${poppins.variable} antialiased`}>
-        {/* Header tampil di semua halaman */}
+    <html lang="id" suppressHydrationWarning>
+      <body
+        className={`${inter.variable} ${poppins.variable} antialiased`}
+      >
         <Header />
-        {children}
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>

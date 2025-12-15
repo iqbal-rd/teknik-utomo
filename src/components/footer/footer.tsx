@@ -109,11 +109,11 @@ export default function Footer() {
           <div>
             <h3 className="text-[#F2F2F2] text-[14px] md:text-[16px] lg:text-[18px] font-medium mb-2.5 md:mb-[15px] lg:mb-[30px] text-left">Navigasi</h3>
             <ul className="space-y-3 text-sm">
-              <li><a href="#" className="cursor-default hover:underline">Beranda</a></li>
-              <li><a href="#" className="cursor-default hover:underline">Tentang Kami</a></li>
-              <li><a href="#" className="cursor-default hover:underline">Produk</a></li>
-              <li><a href="#" className="cursor-default hover:underline">Blog</a></li>
-              <li><a href="#" className="cursor-default hover:underline">Kontak</a></li>
+              <li><a href="/" className="cursor-default hover:underline">Beranda</a></li>
+              <li><a href="/tentang" className="cursor-default hover:underline">Tentang Kami</a></li>
+              <li><a href="/katalog" className="cursor-default hover:underline">Produk</a></li>
+              <li><a href="/blog" className="cursor-default hover:underline">Blog</a></li>
+              <li><a href="/kontak" className="cursor-default hover:underline">Kontak</a></li>
             </ul>
           </div>
 

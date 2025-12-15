@@ -20,14 +20,8 @@ export default function Header() {
 
   return (
     <header className="w-full bg-white shadow-sm fixed top-0 z-50">
-      <div
-        className="
-          flex items-center justify-between gap-2
-          w-full h-[40px] md:h-[60px] lg:h-[80px]
-          px-[14px] py-2.5 md:px-[26px] md:py-4 lg:px-[64px] lg:py-6
-          transition-colors duration-300 bg-white
-        "
-      >
+      <div className="flex items-center justify-between gap-2 w-full h-[40px] md:h-[60px] lg:h-[80px] px-[14px] py-2.5 md:px-[26px] md:py-4 lg:px-[64px] lg:py-6 transition-colors duration-300 bg-white shadow-lg fixed top-0 left-0">
+        
         {/* LOGO */}
         <Image src="/logo.svg" alt="Utomo Logo" width={150} height={100} />
 
@@ -35,19 +29,15 @@ export default function Header() {
         <nav className="hidden md:flex space-x-8">
           {navItems.map((item) => {
             const active = pathname === item.url;
-
             return (
               <Link
                 key={item.url}
                 href={item.url}
-                className={`
-                  font-medium transition
-                  ${
-                    active
-                      ? "text-[#F05A28] underline underline-offset-2 cursor-pointer"
-                      : "text-[#2F2D93] hover:text-orange-600 hover:underline"
-                  }
-                `}
+                className={`font-medium transition ${
+                  active
+                    ? "text-[#F05A28] underline underline-offset-2 cursor-pointer"
+                    : "text-[#2F2D93] hover:text-orange-600 hover:underline"
+                }`}
               >
                 {item.label}
               </Link>
@@ -73,22 +63,15 @@ export default function Header() {
 
       {/* MOBILE OVERLAY */}
       {open && (
-        <div
-          className="fixed inset-0 bg-black/40 z-40"
-          onClick={() => setOpen(false)}
-        />
+        <div className="fixed inset-0 bg-black/40 z-40" onClick={() => setOpen(false)} />
       )}
 
       {/* MOBILE SLIDE MENU */}
       <div
-        className={`
-          fixed top-0 right-0 h-full w-[70%] max-w-[300px]
-          bg-white shadow-lg z-50 p-6 flex flex-col gap-6
-          transition-transform duration-300
-          ${open ? "translate-x-0" : "translate-x-full"}
-        `}
+        className={`fixed top-0 right-0 h-full w-[70%] max-w-[300px] bg-white shadow-lg z-50 p-6 flex flex-col gap-6 transition-transform duration-300 ${
+          open ? "translate-x-0" : "translate-x-full"
+        }`}
       >
-        {/* Mobile header */}
         <div className="flex items-center justify-between mb-2">
           <Image src="/logo.svg" alt="Utomo Logo" width={120} height={60} />
           <button className="text-orange-700" onClick={() => setOpen(false)}>
@@ -96,20 +79,15 @@ export default function Header() {
           </button>
         </div>
 
-        {/* MOBILE NAV */}
         <nav className="flex flex-col gap-4 text-blue-900 font-medium text-lg">
           {navItems.map((item) => {
             const active = pathname === item.url;
-
             return (
               <Link
                 key={item.url}
                 href={item.url}
                 onClick={() => setOpen(false)}
-                className={`
-                  transition
-                  ${active ? "text-[#F05A28] underline underline-offset-2 cursor-pointer" : ""}
-                `}
+                className={`${active ? "text-[#F05A28] underline underline-offset-2 cursor-pointer" : ""}`}
               >
                 {item.label}
               </Link>
@@ -117,7 +95,6 @@ export default function Header() {
           })}
         </nav>
 
-        {/* CTA Mobile */}
         <Link
           href="/kontak"
           onClick={() => setOpen(false)}
